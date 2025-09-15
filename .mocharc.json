@@ -1,0 +1,7 @@
+{
+  "spec": [
+    "tests/**/*.test.js"
+  ],
+  "reporter": "mochawesome",
+  "timeout": 8000
+}

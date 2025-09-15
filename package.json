@@ -1,0 +1,46 @@
+{
+  "name": "automacao-de-testes-na-camada-de-servico-api",
+  "version": "1.0.0",
+  "description": "API simples em REST e GraphQL com autenticação JWT, testes Mocha/Chai/Supertest, Sinon e pipeline CI.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "start:graphql": "node graphql/server.js",
+    "test": "mocha \"tests/**/*.test.js\" --reporter mochawesome --timeout 8000",
+    "test:unit": "mocha \"tests/**/*sinon*.test.js\" --reporter mochawesome --timeout 8000",
+    "test:api": "mocha \"tests/**/*externa*.test.js\" --reporter mochawesome --timeout 10000",
+    "lint": "echo \"(Opcional) Adicione ESLint se desejar\"",
+    "posttest": "echo \"Relatório mochawesome gerado em mochawesome-report\""
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "graphql",
+    "jwt",
+    "mocha",
+    "chai",
+    "supertest",
+    "sinon",
+    "swagger"
+  ],
+  "author": "Edson",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "bcryptjs": "^2.4.3",
+    "chai": "^4.4.1",
+    "express": "^4.19.2",
+    "graphql": "^16.8.2",
+    "jsonwebtoken": "^9.0.2",
+    "swagger-ui-express": "^5.0.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "mocha": "^10.7.3",
+    "mochawesome": "^7.1.3",
+    "sinon": "^17.0.1",
+    "supertest": "^6.3.4",
+    "cross-env": "^7.0.3"
+  }
+}
